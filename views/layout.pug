@@ -1,0 +1,15 @@
+doctype html 
+html(lang="en")
+  head 
+    meta(charset="utf-8")
+    title #{title} | Ecommerce App
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    header#header 
+      include includes/nav.pug
+    main#main 
+      block layout-content 
+    footer#footer 
+      include includes/footer.pug
+
+    

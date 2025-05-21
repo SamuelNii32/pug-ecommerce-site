@@ -1,0 +1,47 @@
+extends layout
+
+block layout-content 
+  section.hero 
+    .hero-content 
+      h1 Scandinavian Design for Modern living 
+      p Discover our curated collection of minimalist furniture and decor that brings warmth and simplicty to your home.
+      a.btn(href="#") Shop Collection
+
+  section.categories 
+    .container
+      h2 Shop by Category
+      .categories-grid 
+        a.category-card(href="#")
+          img(src="/Images/fur1.avif", alt="Living Room Furniture")
+          h3 Living Room 
+        a.category-card(href="#")
+          img(src="/Images/fur2.jpg", alt="Dining Room Furniture",  class="resized-image")
+          h3 Dining
+        a.category-card(href="#")
+          img(src="/Images/fur3.avif", alt="Bedroom")
+          h3 Bedroom
+        a.category-card(href="#")
+          img(src="/Images/fur4.avif", alt="Decor")
+          h3 Decor
+
+  section.featured-products 
+    .container 
+      h2 Featured Products 
+      .products-grid 
+         each product in products 
+           .product-card 
+             .product-image 
+               img(src=product.img, alt=product.name)
+             h3= product.name 
+             p.price= product.price
+             a.btn-secondary(href="#") Add to Cart
+
+  section.newsletter 
+    .container 
+      .newsletter-content 
+        h2 Stay Inspired 
+        p Join our newsletter for exclusinve offers, new product previews, and design inspiration for your home.
+        form
+          input(type="email", placeholder="Your email address", required) 
+          button.btn(type="sbumit") Subscribe 
+        p.small By subscribing, you agree to our privary policy and consent to receive marketing emails from us.

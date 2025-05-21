@@ -1,0 +1,15 @@
+header
+  .container
+    .header-content
+      a.logo(href="index.html") NordStyle
+      nav
+        ul
+          li: a(href="/", class=(title === 'Home' ? 'active' : '')) Home
+          li: a(href="/about", class=(title === 'About' ? 'active' : '')) About
+          li: a(href="#") Shop
+          li: a(href="#") Collections
+          li: a(href="#") Contact
+      .header-icons
+        a.icon(href="#") 🔍
+        a.icon(href="#") 👤
+        a.icon(href="#") 🛒
